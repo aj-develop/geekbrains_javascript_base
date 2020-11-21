@@ -5,12 +5,10 @@
     <title>Урок 1. Основы языка JavaScript</title>
 </head>
 <body>
-<script type="text/javascript">
+<script>
     "use strict";
-    let tc = prompt("Температура в градусах по Цельсию:");
-    tc = parseInt(tc);
-    let tf;
-    tf = (9 / 5) * tc + 32;
+    let tc = parseInt(prompt("Температура в градусах по Цельсию:"));
+    let tf = (9 / 5) * tc + 32;
     alert("Температура в градусах по Фаренгейту: " + tf);
 </script>
 </body>
