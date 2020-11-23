@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Урок 2. Основы языка JavaScript</title>
+    <script src="4_app.js"></script>
+</head>
+<body>
+<script>
+    "use strict";
+    let amount = +prompt("Какую сумму вы хотите положить на счет в банке:");
+    if (isANumber(amount))
+        alert(`Ваша сумма в ${amount} ${getRbl(amount)} успешно зачислена.`);
+
+    /**
+     * Функция выводит слово «рубль» в правильном падеже, в зависимости от введенного числа.
+     * @param {number} amount
+     * @returns {string}
+     */
+    function getRbl(amount) {
+        let amountString = String(amount);
+        let amountStringLength = amountString.length;
+        let lastDigit = (amountStringLength === 1) ? amount : Number(amountString.charAt(amountStringLength - 1));
+        switch (true) {
+            case lastDigit === 1 && amount !== 11:
+                return 'рубль';
+            case (lastDigit >= 2 && lastDigit <= 4) && (amount < 5 || amount > 21):
+                return 'рубля';
+            default:
+                return 'рублей';
+        }
+    }
+</script>
+</body>
+</html>
