@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Урок 4. Основы языка JavaScript</title>
+</head>
+<body>
+<script>
+    "use strict";
+    /*
+        Сделайте в стиле es5, а затем в стиле es6 (по аналогии из урока), конструктор Product,
+        который принимает параметры name и price, сохраните их как свойства объекта.
+        Также объекты типа Product должны иметь метод make25PercentDiscount,
+        который будет уменьшать цену в объекте на 25%.
+        Имейте в виду, что метод make25PercentDiscount не должен быть внутри функции-конструктора,
+        и также не нужно создавать отдельный объект-прототип (как объект transport в уроке).
+     */
+
+    // es5
+    function ProductES5(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    ProductES5.prototype.make25PercentDiscount = function () {
+        return this.price - this.price * 25 / 100;
+    }
+    // test
+    const productES5 = new ProductES5('Termo5', 100);
+    console.log(productES5.make25PercentDiscount());
+
+    // es6
+    class Product {
+        constructor(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        /**
+         * make 25 percent discount
+         * @returns {number}
+         */
+        make25PercentDiscount() {
+            return this.price - this.price * 25 / 100;
+        }
+    }
+
+    // test
+    const product = new Product('Term6', 200);
+    console.log(product.make25PercentDiscount());
+
+</script>
+</body>
+</html>
