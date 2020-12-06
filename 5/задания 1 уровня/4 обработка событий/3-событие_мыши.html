@@ -6,15 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <button>Кнопка</button>
-    <button class="btn">Кнопка с классом btn</button>
-    <button>Кнопка</button>
+<button>Кнопка</button>
+<button class="btn">Кнопка с классом btn</button>
+<button>Кнопка</button>
 
-    <!-- Задание. Сделайте, чтобы по клику по кнопке с классом .btn появлялся
-    alert('клик') -->
+<!-- Задание. Сделайте, чтобы по клику по кнопке с классом .btn появлялся
+alert('клик') -->
 
-    <script>
-        
-    </script>
+<script>
+    "use strict";
+    let buttonEl = document.querySelector('button[class=btn]');
+    buttonEl.addEventListener('click', function () {
+        alert('клик');
+    });
+</script>
 </body>
 </html>
