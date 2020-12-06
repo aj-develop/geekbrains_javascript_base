@@ -6,18 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <h3 class="one">Заголовок</h3>
-    <a class="one" href="#">ссылка</a>
-    <p class="one">параграф</p>
+<h3 class="one">Заголовок</h3>
+<a class="one" href="#">ссылка</a>
+<p class="one">параграф</p>
 
-    <!-- Задание.
-    1. Сохраните в переменную коллекцию элементов с классом one. Для получения
-    элементов используйте метод. getElementsByClassName() 
-    2. С помощью цикла переберите эту коллекцию и выведите в консоль название тега.
-    -->
+<!-- Задание.
+1. Сохраните в переменную коллекцию элементов с классом one. Для получения
+элементов используйте метод. getElementsByClassName()
+2. С помощью цикла переберите эту коллекцию и выведите в консоль название тега.
+-->
 
-    <script>
-
-    </script>
+<script>
+    "use strict";
+    let classOneElements = document.getElementsByClassName('one');
+    for (let i = 0; i < classOneElements.length; i++) {
+        //console.log(classOneElements[i].localName);
+        console.log(classOneElements[i].tagName);
+    }
+</script>
 </body>
 </html>

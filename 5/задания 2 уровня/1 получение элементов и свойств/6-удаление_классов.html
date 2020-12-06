@@ -6,22 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="card hidden">
-        Lorem ipsum dolor sit.
-    </div>
-    <div class="card">
-        Lorem ipsum dolor sit.
-    </div>
-    <div class="card hidden">
-        Lorem ipsum dolor sit.
-    </div>
-    <div class="card">
-        Lorem ipsum dolor sit.
-    </div>
+<div class="card hidden">
+    Lorem ipsum dolor sit.
+</div>
+<div class="card">
+    Lorem ipsum dolor sit.
+</div>
+<div class="card hidden">
+    Lorem ipsum dolor sit.
+</div>
+<div class="card">
+    Lorem ipsum dolor sit.
+</div>
 
-    <!-- Задание.
-    1. Найдите все "карточки" с классом .card.
-    2. Проверьте есть ли у карточки класс hidden с помощью метода contains(),
-    и если есть, то удалите с помощью метода remove(). -->
+<!-- Задание.
+1. Найдите все "карточки" с классом .card.
+2. Проверьте есть ли у карточки класс hidden с помощью метода contains(),
+и если есть, то удалите с помощью метода remove(). -->
+
+<script>
+    "use strict";
+    let classCardDivs = document.querySelectorAll('div.card');
+    classCardDivs.forEach(function (div) {
+        if (div.classList.contains('hidden')) {
+            div.classList.remove('hidden');
+        }
+    });
+</script>
+
 </body>
 </html>

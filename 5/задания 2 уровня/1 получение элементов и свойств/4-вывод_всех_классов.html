@@ -6,17 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="one two three"></div>
+<div class="one two three"></div>
 
-    <!-- 
-    Задание.
-    1. Сохраните в переменную тег div.
-    2. Создайте переменную classes, и в нее сохраните значение свойства classList.
-    3. C помощью forEach переберите classes и выведите каждый класс в консоль.
-     -->
+<!--
+Задание.
+1. Сохраните в переменную тег div.
+2. Создайте переменную classes, и в нее сохраните значение свойства classList.
+3. C помощью forEach переберите classes и выведите каждый класс в консоль.
+ -->
 
-    <script>
-        
-    </script>
+<script>
+    "use strict";
+    let divEl = document.querySelector('div');
+    let classes = divEl.classList;
+    classes.forEach(function (className) {
+        console.log(className);
+    });
+</script>
 </body>
 </html>

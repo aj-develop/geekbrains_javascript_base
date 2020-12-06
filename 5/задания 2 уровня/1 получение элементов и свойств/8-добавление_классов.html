@@ -6,20 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <b>Lorem, ipsum.</b>
-    <b class="sign">Lorem, ipsum.</b>
-    <b class="sign">Lorem, ipsum.</b>
-    <b>Lorem, ipsum.</b>
+<b>Lorem, ipsum.</b>
+<b class="sign">Lorem, ipsum.</b>
+<b class="sign">Lorem, ipsum.</b>
+<b>Lorem, ipsum.</b>
 
-    <!-- 
-    Задание.
-    1. Получите все теги b.
-    2. С помощью метода contains() из classList, проверьте, есть ли у тега
-    класс sign, и если нет, то тогда добавьте с помощью метода add()
-    -->
+<!--
+Задание.
+1. Получите все теги b.
+2. С помощью метода contains() из classList, проверьте, есть ли у тега
+класс sign, и если нет, то тогда добавьте с помощью метода add()
+-->
 
-    <script>
-        
-    </script>
+<script>
+    "use strict";
+    let bElements = document.querySelectorAll('b');
+    bElements.forEach(function (bTag) {
+        if (!bTag.classList.contains('sign')) {
+            bTag.classList.add('sign');
+        }
+    });
+</script>
+
 </body>
 </html>

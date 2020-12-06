@@ -6,17 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="#">ссылка</a>
-    <a href="#"></a>
-    <a href="#">ссылка</a>
-    <a href="#"></a>
+<a href="#">ссылка</a>
+<a href="#"></a>
+<a href="#">ссылка</a>
+<a href="#"></a>
 
-    <!-- Задание.
-    1. Получите все ссылки.
-    2. Проверьте, есть ли в ссылке текст "ссылка", и если нет, то добавьте. -->
+<!-- Задание.
+1. Получите все ссылки.
+2. Проверьте, есть ли в ссылке текст "ссылка", и если нет, то добавьте. -->
 
-    <script>
-        
-    </script>
+<script>
+    "use strict";
+    let aElements = document.querySelectorAll('a');
+    aElements.forEach(function (link) {
+        if (link.innerText !== 'ссылка') {
+            link.innerText = 'ссылка';
+        }
+    });
+</script>
 </body>
 </html>
