@@ -6,15 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="one" class="btn">Кнопка 1</button>
+<button id="one" class="btn">Кнопка 1</button>
 
-    <!-- 
-    Задание.
-    1. Получите кнопку и сохраните ее в переменную.
-    2. Назначьте кнопке обработку клика.
-    3. У функции-обработчика клика сделайте параметр event
-    4. При клике из event.target выведите в консоль: id, имя класса (используйте
-    свойство className), текст на кнопке.
-    -->
+<!--
+Задание.
+1. Получите кнопку и сохраните ее в переменную.
+2. Назначьте кнопке обработку клика.
+3. У функции-обработчика клика сделайте параметр event
+4. При клике из event.target выведите в консоль: id, имя класса (используйте
+свойство className), текст на кнопке.
+-->
 </body>
+
+<script>
+    "use strict";
+    let buttonEl = document.querySelector('button[id=one]');
+    buttonEl.addEventListener('click', function (event) {
+        console.log('id: ' + event.target.id);
+        console.log('имя класса: ' + event.target.className);
+        console.log('текст на кнопке: ' + event.target.innerText);
+    });
+</script>
+
 </html>
