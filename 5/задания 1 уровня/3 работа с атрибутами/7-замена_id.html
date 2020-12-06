@@ -6,16 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <article>
-        <h2>title</h2>
-        text
-    </article>
-    <article>
-        <h2 id="title">title</h2>
-        text
-    </article>
+<article>
+    <h2>title</h2>
+    text
+</article>
+<article>
+    <h2 id="title">title</h2>
+    text
+</article>
 
-    <!-- Задание. найдите заголовок с id="title" и замените значение id
-    на что-то другое. -->
+<!-- Задание. найдите заголовок с id="title" и замените значение id
+на что-то другое. -->
+
+<script>
+    "use strict";
+    let idTitleEl = document.querySelector('h2[id=title]');
+    idTitleEl.id = 'title22';
+</script>
 </body>
 </html>

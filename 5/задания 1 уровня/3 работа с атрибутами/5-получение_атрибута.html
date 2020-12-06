@@ -8,16 +8,19 @@
 </head>
 
 <body>
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+</button>
 
-    <!-- Задание. Выведите в консоль значение атрибутов data-dismiss
-    и aria-label с помощью метода getAttribute. -->
+<!-- Задание. Выведите в консоль значение атрибутов data-dismiss
+и aria-label с помощью метода getAttribute. -->
 
-    <script>
-        
-    </script>
+<script>
+    "use strict";
+    let buttonEl = document.querySelector('button[type=button]');
+    console.log(buttonEl.getAttribute('data-dismiss'));
+    console.log(buttonEl.getAttribute('aria-label'));
+</script>
 </body>
 
 </html>

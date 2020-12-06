@@ -6,12 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <div class="menu"></div>
 
-    <!-- Задание. Добавьте в div с классом .menu следующую разметку:
-    <a href="#">link</a>
-    используя метод insertAdjacentHTML.
-    -->
+<div class="menu"></div>
+
+<!-- Задание. Добавьте в div с классом .menu следующую разметку:
+<a href="#">link</a>
+используя метод insertAdjacentHTML.
+-->
+
+<script>
+    "use strict";
+    let linkEl = document.createElement('a');
+    linkEl.href = '#';
+    linkEl.innerText = 'link';
+    let divMenuEl = document.querySelector('div[class=menu]');
+    divMenuEl.insertAdjacentHTML('afterbegin', linkEl.outerHTML);
+</script>
 </body>
 </html>

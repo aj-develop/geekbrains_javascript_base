@@ -8,14 +8,20 @@
 </head>
 
 <body>
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
-        </li>
-    </ul>
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+    </li>
+</ul>
 
-    <!-- Задание. Найдите элемент с классом .nav-link и используя метод toggle из свойства classList
-    у элемента, добавьте или уберите класс .active. -->
+<!-- Задание. Найдите элемент с классом .nav-link и используя метод toggle из свойства classList
+у элемента, добавьте или уберите класс .active. -->
+
+<script>
+    "use strict";
+    let navLinkEl = document.querySelector('.nav-link');
+    navLinkEl.classList.toggle('active');
+</script>
 </body>
 
 </html>
