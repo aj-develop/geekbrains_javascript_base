@@ -8,22 +8,28 @@
 </head>
 
 <body>
-    <button type="button" class="btn btn-outline-primary">Primary</button>
-    <button type="button" class="btn btn-outline-secondary">Secondary</button>
-    <button type="button" class="btn btn-outline-success">Success</button>
-    <button type="button" class="btn btn-outline-danger">Danger</button>
-    <button type="button" class="btn btn-outline-warning">Warning</button>
-    <button type="button" class="btn btn-outline-info">Info</button>
-    <button type="button" class="btn btn-outline-light">Light</button>
-    <button type="button" class="btn btn-outline-dark">Dark</button>
+<button type="button" class="btn btn-outline-primary">Primary</button>
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+<button type="button" class="btn btn-outline-success">Success</button>
+<button type="button" class="btn btn-outline-danger">Danger</button>
+<button type="button" class="btn btn-outline-warning">Warning</button>
+<button type="button" class="btn btn-outline-info">Info</button>
+<button type="button" class="btn btn-outline-light">Light</button>
+<button type="button" class="btn btn-outline-dark">Dark</button>
 
-    <!-- Задание. 
-    1. Найдите элемент с классом .btn-outline-warning и удалите его.
-    2. Аналогичным образом удалите элемент с классом .btn-outline-dark -->
+<!-- Задание.
+1. Найдите элемент с классом .btn-outline-warning и удалите его.
+2. Аналогичным образом удалите элемент с классом .btn-outline-dark -->
 
-    <script>
-
-    </script>
+<script>
+    "use strict";
+    // 1. Найдите элемент с классом .btn-outline-warning и удалите его.
+    let btnOutlineWarningEl = document.querySelector('.btn-outline-warning');
+    btnOutlineWarningEl.remove();
+    // 2. Аналогичным образом удалите элемент с классом .btn-outline-dark
+    let btnOutlineDarkEl = document.querySelector('.btn-outline-dark');
+    btnOutlineDarkEl.remove();
+</script>
 </body>
 
 </html>

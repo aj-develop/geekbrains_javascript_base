@@ -6,17 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <div>
 
-    </div>
+<div>
 
-    <!-- Задание. Добавьте в div c помощью appendChild следующую разметку:
-    <h3>hello world</h3>
-    -->
+</div>
 
-    <script>
+<!-- Задание. Добавьте в div c помощью appendChild следующую разметку:
+<h3>hello world</h3>
+-->
 
-    </script>
+<script>
+    "use strict";
+    let h3El = document.createElement('h3');
+    let divEl = document.querySelector('div');
+    divEl.appendChild(h3El);
+    h3El.innerHTML = 'hello world';
+</script>
 </body>
 </html>
