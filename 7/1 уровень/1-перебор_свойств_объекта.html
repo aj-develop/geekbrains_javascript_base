@@ -6,19 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        const products = {
-            one: "один",
-            two: "два",
-            three: "три",
-        };
+<script>
+    "use strict";
 
-        /* 
-        Задание.
-        Используя цикл for in переберите объект products, ведите в консоль
-        имя свойства, значение свойства.
-        */
+    const products = {
+        one: "один",
+        two: "два",
+        three: "три",
+    };
 
-    </script>
+    /*
+    Задание.
+    Используя цикл for in переберите объект products, ведите в консоль
+    имя свойства, значение свойства.
+    */
+
+    for (let product in products) {
+        console.dir(product + " : " + products[product]);
+    }
+
+</script>
 </body>
 </html>
