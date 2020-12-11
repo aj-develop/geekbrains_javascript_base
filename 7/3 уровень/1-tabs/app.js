@@ -12,32 +12,48 @@ const texts = {
     обработчик клика функцию clickHandler.
 */
 
+let divText = document.querySelector('div.text');
+let navLinks = document.querySelectorAll('a.nav-link');
+
+navLinks.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+        clickHandler(event);
+    });
+});
 
 /**
  * Обработчик клика по .nav-link
- * @param {MouseEvent} event 
+ * @param {Event} event
  */
 function clickHandler(event) {
     // здесь вызывайте changeText и changeActiveClass, и передавайте
     // им объект события.
-   
+    changeText(event);
+    changeActiveClass(event);
 }
 
 /**
  * Эта функция должна убирать .active у предыдущего .nav-link и ставить его
  * на тот, по которому кликнули.
- * @param {MouseEvent} event 
+ * @param {MouseEvent} event
  */
 function changeActiveClass(event) {
-    
+    navLinks.forEach(function (link) {
+        if (link.classList.contains('active')) {
+            link.classList.remove('active');
+        }
+    });
+    event.target.classList.add('active');
 }
 
 /**
- * Эта фукнция должна читать текст (например через textContent) из 
+ * Эта фукнция должна читать текст (например через textContent) из
  * .nav-link по которому кликнули и в зависимости от этого в .text
  * ставить соответствующий текст из texts.
- * @param {MouseEvent} event 
+ * @param {MouseEvent} event
  */
 function changeText(event) {
-    
+    let textContent = event.target.textContent;
+    let textNumber = textContent.substr(textContent.length - 1);
+    divText.innerHTML = texts[`text${textNumber}`];
 }
