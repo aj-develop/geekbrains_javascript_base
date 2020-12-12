@@ -1,4 +1,5 @@
 "use strict";
+
 /* 
 Разметка товара:
 
@@ -75,6 +76,14 @@ const products = {
     ],
 };
 
+let divProducts = document.querySelector('div.products');
+let buttons = document.querySelectorAll('button');
+
+buttons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+        clickHandler(event);
+    });
+});
 
 /**
  * Эта функция должна вызываться при клике по кнопкам.
@@ -82,10 +91,10 @@ const products = {
  */
 function clickHandler(event) {
     //вам нужно очищать содержимое .products
-    
+    divProducts.innerHTML = '';
     //в showCategory надо передать строку с типом категории, тип берите
     //из атрибута data-type у кнопки, по которой кликнули.
-    
+    showCategory(event.target.dataset.type);
 }
 
 /**
@@ -96,11 +105,11 @@ function clickHandler(event) {
  * по которой кликнули.
  */
 function showCategory(category) {
-    
+    divProducts.innerHTML = getProductMarkup(products[category]);
 }
 
 /**
- * @param {Object} product объект из массива phones, tablets или tv.
+ * @param {Array} product объект из массива phones, tablets или tv.
  * @param {number} product.id id продукта
  * @param {string} product.name название продукта
  * @param {string} product.price цена продукта
@@ -109,5 +118,16 @@ function showCategory(category) {
  * в верху этого файла.
  */
 function getProductMarkup(product) {
+    let html = '';
 
+    product.forEach(function (item) {
+        html += `<div class="product">
+                    <div>${item.name}</div>
+                    <img src="${item.imageUrl}" alt="">
+                    <div>${item.price}</div>
+                    <a href="https://example.com/producs/${item.id}">Подробнее</a>
+                </div>`;
+    });
+
+    return html;
 }
